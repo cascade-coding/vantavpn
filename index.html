@@ -19,7 +19,9 @@
     <!-- Start: Top Header -->
     <nav class="pt-0 sm:py-3 border-b border-accent-2">
       <div class="max-w-[1280px] mx-auto">
-        <div class="relative flex items-center justify-between px-3 sm:px-4 lg:px-6">
+        <div
+          class="relative flex items-center justify-between px-3 sm:px-4 lg:px-6"
+        >
           <div
             x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
             x-html="icon"
@@ -27,7 +29,7 @@
 
           <!-- large menu -->
           <ul
-            class="hidden sm:flex items-center justify-center gap-x-16 select-none"
+            class="hidden lg:flex items-center justify-center gap-x-16 select-none"
           >
             <li>
               <a href="#intro" class="hover:text-accent-3 transition"
@@ -53,7 +55,7 @@
           </ul>
 
           <button
-            class="menu_trigger block sm:hidden hover:**:stroke-accent **:transition cursor-pointer"
+            class="menu_trigger block lg:hidden hover:**:stroke-accent **:transition cursor-pointer"
           >
             <svg
               width="24"
@@ -114,28 +116,112 @@
 
     <!-- Start: Hero Section -->
 
-    <section class="relative md:h-[600px] h-[500px] overflow-hidden text-white">
-      <div>
-        <h1
-          class="pr-6 md:pr-28 font-primary font-bold leading-[120%] tracking-[0.8px] text-[28px] md:text-[56px] xl:text-[64px] 2xl:text-[74px] text-accent"
-        >
-          Be Unseen. Stay Unfound.
-        </h1>
+    <section
+      class="relative h-[900px] sm:overflow-hidden sm:h-[680px] md:h-[640px] lg:h-[600px] text-white"
+    >
+      <div
+        class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[70px] pb-[28px] px-3 sm:px-4"
+      >
+        <div class="max-w-[900px]">
+          <h1
+            class="font-primary font-bold leading-[120%] tracking-[0.5px] text-[28px] sm:text-[38px] md:text-[48px] lg:text-[56px] xl:text-[68px]"
+          >
+            Be Unseen. Stay Unfound.
+          </h1>
+
+          <p
+            class="max-w-[580px] mt-4 font-primary font-medium leading-[130%] tracking-[0.5px] text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px]"
+          >
+            Next-level VPN powered by Dynamic Multi-Hop Obfuscation, Stealth
+            Kill Switch with Traffic Shaping.
+          </p>
+
+          <div
+            class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-start gap-5"
+          >
+            <a
+              href="#"
+              class="min-w-[200px] text-center bg-accent-2 hover:bg-accent-2/80 transition py-2 sm:py-2.5 px-[24px] rounded-lg border-2 border-[#07167E] cursor-pointer"
+              >Get VantaVPN Now</a
+            >
+            <a
+              href="#"
+              class="min-w-[200px] text-center bg-accent hover:bg-accent/80 transition py-2 sm:py-2.5 px-[24px] rounded-lg border-2 border-[#077E5E] cursor-pointer text-black"
+              >See How It Works</a
+            >
+          </div>
+
+          <div class="mt-10 flex flex-col items-start gap-4">
+            <div class="flex items-center justify-center gap-2">
+              <div
+                x-data="iconComponent('calendar-off', '')"
+                x-html="icon"
+              ></div>
+              <span
+                class="font-primary font-bold leading-[120%] tracking-[0.5px]"
+                >No logs. No compromises.</span
+              >
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <div x-data="iconComponent('codepan', '')" x-html="icon"></div>
+              <span
+                class="font-primary font-bold leading-[120%] tracking-[0.5px]"
+                >Open source. Audited.</span
+              >
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <div x-data="iconComponent('earth-lock', '')" x-html="icon"></div>
+              <span
+                class="font-primary font-bold leading-[120%] tracking-[0.5px]"
+                >Military-grade encryption worldwide.</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
 
       <div
-        class="absolute -right-4 sm:right-0 2xl:-right-20 inset-0 z-10 flex justify-end items-end max-w-[1280px] mx-auto"
+        class="absolute inset-0 -z-10 flex justify-center items-end sm:justify-end sm:items-end max-w-[1580px] mx-auto"
       >
         <img
-          src="/assets/"
+          src="/assets/network-sm.svg"
           alt=""
-          class="w-custom-range-img-xs w-[200px] w-custom-range-img sm:w-[320px] md:w-[330px] lg:w-[420px] xl:w-[480px]"
+          class="relative sm:hidden top-[100px] w-full custom-range-img-xs"
+          loading="lazy"
+        />
+
+        <img
+          src="/assets/network.svg"
+          alt=""
+          class="relative hidden sm:block sm:w-[580px] sm:left-[90px] md:w-[680px] md:top-[90px] md:left-[60px] lg:w-[700px] lg:-top-[40px] xl:w-[880px] xl:top-[100px] xl:left-[80px]"
           loading="lazy"
         />
       </div>
     </section>
-
     <!-- End: Hero Section -->
+
+    <!-- Start: Features Section -->
+
+    <section class="relative pt-[20px] sm:pt-[40px]">
+      <div
+        class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[70px] pb-[28px] px-3 sm:px-4"
+      >
+        <div class="max-w-[600px]">
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] text-sm text-gray-500"
+          >
+            Why VantaVPN?
+          </p>
+
+          <h1
+            class="mt-4 text-accent-2 font-primary font-bold leading-[120%] tracking-[0.5px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px]"
+          >
+            Built for Untraceable Privacy
+          </h1>
+        </div>
+      </div>
+    </section>
+    <!-- End: Feature Section -->
 
     <!-- Start: Footer -->
     <footer class="bg-primary mt-[80px]">

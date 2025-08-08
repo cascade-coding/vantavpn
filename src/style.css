@@ -9,27 +9,39 @@
   --color-pure: #ffffff;
   --color-lines: #1a1c1f;
 
-  --font-base: "Inter", sans-serif;
+  --font-inter: "Inter", sans-serif;
   --font-primary: "Space Grotesk", sans-serif;
 
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
   color: var(--color-pure);
   background-color: var(--color-bg);
 }
 
 @layer utilities {
-  @media (min-width: 530px) and (max-width: 620px) {
-    .w-custom-range-img {
-      width: 280px;
+  @media (min-width: 540px) and (max-width: 640px) {
+    .custom-range-img-xs {
+      top: 220px;
     }
   }
 
-  @media (max-width: 340px) {
-    .w-custom-range-img-xs {
-      width: 160px;
+  @media (min-width: 440px) and (max-width: 540px) {
+    .custom-range-img-xs {
+      top: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .custom-range-img-xs {
+      top: 150px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .custom-range-img-xs {
+      top: 50px;
     }
   }
 }
