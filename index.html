@@ -219,6 +219,47 @@
             Built for Untraceable Privacy
           </h1>
         </div>
+
+        <div
+          x-data="{
+            features: [
+              { id: '001', icon: iconComponent('nodes', ''), title: 'Dynamic Multi‑Hop Routing', desc: 'Traffic bounces through randomized servers every 5 minutes, doubling your anonymity without slowing you down.' },
+              { id: '002', icon: iconComponent('target', ''), title: 'Adaptive Traffic Obfuscation', desc: 'Automatically disguises your VPN traffic to look like regular internet traffic, bypassing deep packet inspection without sacrificing speed or reliability.' },
+              { id: '003', icon: iconComponent('vault', ''), title: 'Stealth Kill-Switch Plus', desc: 'Cuts off all internet access instantly on disconnect and masks packet size to prevent data leaks and tracking.' },
+            ]
+          }"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-7"
+        >
+          <template x-for="feature in features" :key="feature.id">
+            <div class="bg-[#02061D] p-4 rounded-md min-h-[220px]">
+              <div x-data="feature.icon" x-html="icon"></div>
+
+              <h1
+                class="mt-6 font-primary font-bold leading-[120%] tracking-[0.5px] text-[18px] sm:text-[20px] md:text-[24px]"
+                x-text="feature.title"
+              ></h1>
+
+              <p
+                class="mt-5 font-primary font-normal leading-[120%] tracking-[0.5px]"
+                x-text="feature.desc"
+              ></p>
+            </div>
+          </template>
+        </div>
+
+        <div
+          class="bg-gradient-to-r from-[#12921b]/20 to-[#3bfa48]/20 p-[2px] mt-7 rounded-lg w-full max-w-[680px]"
+        >
+          <div class="bg-[#05081A] rounded-lg px-5 py-3">
+            <p
+              class="font-primary font-bold leading-[120%] tracking-[0.5px] text-white break-words"
+              x-text="feature.desc"
+            >
+              No logs • RAM-only servers • Open-source clients • 24/7 Security
+              Monitoring
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <!-- End: Feature Section -->
