@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --color-bg: #050607;
+  --color-accent: #00ffbb;
+  --color-accent-2: #3a50e0;
+  --color-accent-3: #F033B4;
+  --color-pure: #ffffff;
+  --color-lines: #1a1c1f;
+
+  --font-base: "Inter", sans-serif;
+  --font-primary: "Space Grotesk", sans-serif;
+
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--color-pure);
+  background-color: var(--color-bg);
+}
+
+@layer utilities {
+  @media (min-width: 530px) and (max-width: 620px) {
+    .w-custom-range-img {
+      width: 280px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .w-custom-range-img-xs {
+      width: 160px;
+    }
+  }
+}
+
+.mobile_menu {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease, transform 300ms ease;
+  transform: translateX(100%);
+}
+
+/* Active menu state */
+.mobile_menu.open_menu {
+  user-select: auto;
+  pointer-events: all;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobile_menu .menu {
+  transition: transform 500ms ease-in-out;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>VantaVPN</title>
+  </head>
+  <body>
+    <!-- Start: Top Header -->
+    <nav class="pt-0 sm:py-3 border-b border-accent-2">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="relative flex items-center justify-between px-3 sm:px-4 lg:px-6">
+          <div
+            x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
+            x-html="icon"
+          ></div>
+
+          <!-- large menu -->
+          <ul
+            class="hidden sm:flex items-center justify-center gap-x-16 select-none"
+          >
+            <li>
+              <a href="#intro" class="hover:text-accent-3 transition"
+                >Download</a
+              >
+            </li>
+            <li>
+              <a href="#intro" class="hover:text-accent-3 transition"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="#intro" class="hover:text-accent-3 transition"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a href="#intro" class="hover:text-accent-3 transition">Login</a>
+            </li>
+            <li>
+              <a href="#intro" class="hover:text-accent-3 transition">Help</a>
+            </li>
+          </ul>
+
+          <button
+            class="menu_trigger block sm:hidden hover:**:stroke-accent **:transition cursor-pointer"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 12H20M4 18H20M4 6H20"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <!-- mobile menu -->
+          <div class="absolute inset-0 top-[100%] z-50 overflow-x-clip">
+            <div class="mobile_menu bg-zinc-900 p-4 min-h-[280px] sm:hidden">
+              <ul
+                class="menu flex flex-col items-end justify-center gap-[18px] select-none"
+              >
+                <li>
+                  <a href="#intro" class="hover:text-accent-3 transition"
+                    >Download</a
+                  >
+                </li>
+                <li>
+                  <a href="#intro" class="hover:text-accent-3 transition"
+                    >Features</a
+                  >
+                </li>
+                <li>
+                  <a href="#intro" class="hover:text-accent-3 transition"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a href="#intro" class="hover:text-accent-3 transition"
+                    >Login</a
+                  >
+                </li>
+                <li>
+                  <a href="#intro" class="hover:text-accent-3 transition"
+                    >Help</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- End: Top Header -->
+
+    <!-- Start: Hero Section -->
+
+    <section class="relative md:h-[600px] h-[500px] overflow-hidden text-white">
+      <div>
+        <h1
+          class="pr-6 md:pr-28 font-primary font-bold leading-[120%] tracking-[0.8px] text-[28px] md:text-[56px] xl:text-[64px] 2xl:text-[74px] text-accent"
+        >
+          Be Unseen. Stay Unfound.
+        </h1>
+      </div>
+
+      <div
+        class="absolute -right-4 sm:right-0 2xl:-right-20 inset-0 z-10 flex justify-end items-end max-w-[1280px] mx-auto"
+      >
+        <img
+          src="/assets/"
+          alt=""
+          class="w-custom-range-img-xs w-[200px] w-custom-range-img sm:w-[320px] md:w-[330px] lg:w-[420px] xl:w-[480px]"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- End: Hero Section -->
+
+    <!-- Start: Footer -->
+    <footer class="bg-primary mt-[80px]">
+      <div
+        class="max-w-[1280px] mx-auto py-[50px] px-4 md:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-10"
+      >
+        <div>
+          <div
+            x-data="iconComponent('logo', 'w-[120px] md:w-[140px]')"
+            x-html="icon"
+          ></div>
+        </div>
+
+        <div class="flex items-center justify-end gap-x-6">
+          <!-- links -->
+        </div>
+      </div>
+
+      <div
+        class="py-5 text-center text-sm text-gray-200 bg-zinc-700 select-none"
+      >
+        © 2025 VantaVPN. Zero logs. Zero leaks. Total privacy.
+      </div>
+    </footer>
+    <!-- End: Footer -->
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
