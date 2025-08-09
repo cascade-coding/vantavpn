@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vantavpn/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>VantaVPN</title>
+    <script type="module" crossorigin src="/vantavpn/assets/index-CTI3OFKD.js"></script>
+    <link rel="stylesheet" crossorigin href="/vantavpn/assets/index-C3TssZoG.css">
+  </head>
+  <body>
+    <!-- Start: Top Header -->
+    <nav class="pt-0 sm:py-3 border-b border-accent-2">
+      <div class="max-w-[1280px] mx-auto">
+        <div
+          class="relative flex items-center justify-between px-3 sm:px-4 lg:px-6"
+        >
+          <div
+            x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
+            x-html="icon"
+          ></div>
+
+          <!-- large menu -->
+          <ul
+            class="hidden lg:flex items-center justify-center gap-x-16 select-none"
+          >
+            <li>
+              <a href="#download" class="hover:text-accent-3 transition"
+                >Download</a
+              >
+            </li>
+            <li>
+              <a href="#features" class="hover:text-accent-3 transition"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="#plans" class="hover:text-accent-3 transition"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-accent-3 transition">Login</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-accent-3 transition">Help</a>
+            </li>
+          </ul>
+
+          <button
+            class="menu_trigger block lg:hidden hover:**:stroke-accent **:transition cursor-pointer"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 12H20M4 18H20M4 6H20"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <!-- mobile menu -->
+          <div class="absolute inset-0 top-[100%] z-50 overflow-x-clip">
+            <div class="mobile_menu bg-zinc-900 p-4 min-h-[280px] sm:hidden">
+              <ul
+                class="menu flex flex-col items-end justify-center gap-[18px] select-none"
+              >
+                <li>
+                  <a href="#download" class="hover:text-accent-3 transition"
+                    >Download</a
+                  >
+                </li>
+                <li>
+                  <a href="#features" class="hover:text-accent-3 transition"
+                    >Features</a
+                  >
+                </li>
+                <li>
+                  <a href="#plans" class="hover:text-accent-3 transition"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-accent-3 transition"
+                    >Login</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-accent-3 transition"
+                    >Help</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- End: Top Header -->
+
+    <!-- Start: Hero Section -->
+
+    <section
+      class="relative h-[900px] sm:overflow-hidden sm:h-[680px] md:h-[640px] lg:h-[600px] text-white"
+    >
+      <div
+        class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[70px] pb-[28px] px-3 sm:px-4"
+      >
+        <div class="max-w-[900px]">
+          <h1
+            class="font-primary font-bold leading-[120%] tracking-[0.5px] text-[28px] sm:text-[38px] md:text-[48px] lg:text-[56px] xl:text-[68px]"
+          >
+            Be Unseen. Stay Unfound.
+          </h1>
+
+          <p
+            class="max-w-[580px] mt-4 font-primary font-medium leading-[130%] tracking-[0.5px] text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px]"
+          >
+            Next-level VPN powered by Dynamic Multi-Hop Obfuscation, Stealth
+            Kill Switch with Traffic Shaping.
+          </p>
+
+          <div
+            class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-start gap-5"
+          >
+            <a
+              href="#"
+              class="min-w-[200px] text-center bg-accent-2 hover:bg-accent-2/80 transition py-2 sm:py-2.5 px-[24px] rounded-lg border-2 border-[#07167E] cursor-pointer"
+              >Get VantaVPN Now</a
+            >
+            <a
+              href="#"
+              class="min-w-[200px] text-center bg-accent hover:bg-accent/80 transition py-2 sm:py-2.5 px-[24px] rounded-lg border-2 border-[#077E5E] cursor-pointer text-black"
+              >See How It Works</a
+            >
+          </div>
+
+          <div class="mt-10 flex flex-col items-start gap-4">
+            <div class="flex items-center justify-center gap-2">
+              <div
+                x-data="iconComponent('calendar-off', '')"
+                x-html="icon"
+              ></div>
+              <span
+                class="font-primary font-bold leading-[120%] tracking-[0.5px]"
+                >No logs. No compromises.</span
+              >
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <div x-data="iconComponent('codepan', '')" x-html="icon"></div>
+              <span
+                class="font-primary font-bold leading-[120%] tracking-[0.5px]"
+                >Open source. Audited.</span
+              >
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <div x-data="iconComponent('earth-lock', '')" x-html="icon"></div>
+              <span
+                class="font-primary font-bold leading-[120%] tracking-[0.5px]"
+                >Military-grade encryption worldwide.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute inset-0 -z-10 flex justify-center items-end sm:justify-end sm:items-end max-w-[1580px] mx-auto"
+      >
+        <img
+          src="/vantavpn/assets/network-sm.svg"
+          alt=""
+          class="relative sm:hidden top-[100px] w-full custom-range-img-xs"
+          loading="lazy"
+        />
+
+        <img
+          src="/vantavpn/assets/network.svg"
+          alt=""
+          class="relative hidden sm:block sm:w-[580px] sm:left-[90px] md:w-[680px] md:top-[90px] md:left-[60px] lg:w-[700px] lg:-top-[40px] xl:w-[880px] xl:top-[100px] xl:left-[80px]"
+          loading="lazy"
+        />
+      </div>
+    </section>
+    <!-- End: Hero Section -->
+
+    <!-- Start: Features Section -->
+    <section id="features" class="relative">
+      <div
+        class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[70px] pb-[28px] px-3 sm:px-4"
+      >
+        <div class="max-w-[600px]">
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] text-sm text-gray-500"
+          >
+            Why VantaVPN?
+          </p>
+
+          <h1
+            class="mt-4 text-accent-2 font-primary font-bold leading-[120%] tracking-[0.5px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px]"
+          >
+            Built for Untraceable Privacy
+          </h1>
+        </div>
+
+        <div
+          x-data="{
+            features: [
+              { id: '001', icon: iconComponent('nodes', ''), title: 'Dynamic Multi‑Hop Routing', desc: 'Traffic bounces through randomized servers every 5 minutes, doubling your anonymity without slowing you down.' },
+              { id: '002', icon: iconComponent('target', ''), title: 'Adaptive Traffic Obfuscation', desc: 'Automatically disguises your VPN traffic to look like regular internet traffic, bypassing deep packet inspection without sacrificing speed or reliability.' },
+              { id: '003', icon: iconComponent('vault', ''), title: 'Stealth Kill-Switch Plus', desc: 'Cuts off all internet access instantly on disconnect and masks packet size to prevent data leaks and tracking.' },
+            ]
+          }"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-7"
+        >
+          <template x-for="feature in features" :key="feature.id">
+            <div class="bg-[#02061D] p-4 rounded-md min-h-[220px]">
+              <div x-data="feature.icon" x-html="icon"></div>
+
+              <h1
+                class="mt-6 font-primary font-bold leading-[120%] tracking-[0.5px] text-[18px] sm:text-[20px] md:text-[24px]"
+                x-text="feature.title"
+              ></h1>
+
+              <p
+                class="mt-5 font-primary font-normal leading-[130%] tracking-[0.5px]"
+                x-text="feature.desc"
+              ></p>
+            </div>
+          </template>
+        </div>
+
+        <div
+          class="bg-gradient-to-r from-[#12921b]/20 to-[#3bfa48]/20 p-[2px] mt-8 rounded-lg w-full max-w-[680px]"
+        >
+          <div class="bg-[#05081A] rounded-lg px-5 py-3">
+            <p
+              class="font-primary font-bold leading-[120%] tracking-[0.5px] text-white break-words"
+              x-text="feature.desc"
+            >
+              No logs • RAM-only servers • Open-source clients • 24/7 Security
+              Monitoring
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Feature Section -->
+
+    <!-- Start: Steps Section -->
+    <section id="steps" class="relative pt-[20px] sm:pt-[40px] pb-[20px]">
+      <div
+        class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[70px] pb-[28px] px-3 sm:px-4"
+      >
+        <div class="max-w-[700px] 2xl:max-w-[900px]">
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] text-sm text-gray-500"
+          >
+            How It Works
+          </p>
+
+          <h1
+            class="mt-4 text-accent-2 font-primary font-bold leading-[120%] tracking-[0.5px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px]"
+          >
+            Engineered for Maximum Privacy, Built for Speed
+          </h1>
+
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] pt-[28px]"
+          >
+            Here’s how VantaVPN keeps your identity sealed and your data
+            untouchable in real-time.
+          </p>
+        </div>
+
+        <div
+          x-data="{
+            steps: [
+              { id: '001', step_number: '1', icon: iconComponent('rotate', ''), title: 'You Connect to VantaVPN', desc: 'Your device launches a secure tunnel to the nearest high-speed server.' },
+              { id: '002', step_number: '2', icon: iconComponent('mask', ''), title: 'Multi-Hop Encryption Engages', desc: 'Traffic is rerouted through randomized encrypted nodes for extra security.' },
+              { id: '003', step_number: '3', icon: iconComponent('wand', ''), title: 'IP & Metadata Are Obscured', desc: 'Fingerprinting, DNS, and connection patterns are masked in real-time.' },
+              { id: '004', step_number: '4', icon: iconComponent('rocket', ''), title: 'Data Travels Untraceably', desc: 'Requests reach destinations clean — no logs, no traces, no exposure.' },
+            ]
+          }"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5 mt-8 bg-gradient-to-r from-[#0B0899] to-[#040333]"
+        >
+          <template x-for="step in steps" :key="step.id">
+            <div class="bg-[#1A1C1F] p-4 min-h-[220px]">
+              <div class="flex gap-x-5">
+                <div x-data="step.icon" x-html="icon"></div>
+                <span
+                  class="font-inter font-bold text-[20px] text-accent-2 leading-[130%] tracking-[0.5px]"
+                  x-text="step.step_number"
+                ></span>
+              </div>
+
+              <h1
+                class="mt-2 sm:min-h-[48px] font-primary font-bold leading-[120%] tracking-[0.5px] text-[18px] md:text-[20px]"
+                x-text="step.title"
+              ></h1>
+
+              <p
+                class="mt-3 font-inter font-medium text-sm text-gray-300 leading-[130%] tracking-[0.5px]"
+                x-text="step.desc"
+              ></p>
+            </div>
+          </template>
+        </div>
+
+        <div class="mt-12">
+          <a
+            href="#"
+            class="py-2.5 sm:py-[12px] px-[18px] sm:px-[24px] border-2 border-[#3E042C] transition hover:border-[#650a48] rounded-lg"
+            >See Everything We Offer</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- End: Steps Section -->
+
+    <!-- Start: Download Section -->
+    <section id="download" class="relative">
+      <div
+        class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[60px] pb-[100px] px-3 sm:px-4"
+      >
+        <div class="max-w-[700px] 2xl:max-w-[900px]">
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] text-sm text-gray-500"
+          >
+            GET VANTAVPN
+          </p>
+
+          <h1
+            class="mt-4 text-accent-2 font-primary font-bold leading-[120%] tracking-[0.5px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px]"
+          >
+            Download for Every Platform
+          </h1>
+
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] pt-[28px]"
+          >
+            One account. Unlimited installs. Full access on all your devices.
+          </p>
+        </div>
+
+        <div
+          x-data="{
+            platforms: [
+              { id: '001', icon: iconComponent('windows', ''), name: 'Windows'},
+              { id: '002', icon: iconComponent('apple', ''), name: 'macOS'},
+              { id: '003', icon: iconComponent('firefox', ''), name: 'Firefox'},
+              { id: '004', icon: iconComponent('chromium', ''), name: 'Chromium'},
+              { id: '005', icon: iconComponent('android', ''), name: 'Android'},
+              { id: '006', icon: iconComponent('ios', ''), name: 'iPhone/iPad'},
+              { id: '007', icon: iconComponent('linux', ''), name: 'Linux'},
+            ]
+          }"
+          class="flex flex-wrap gap-0.5 gap-y-5 sm:gap-y-2 mt-8 bg-gradient-to-r from-[#011817] to-[#180118] py-4 justify-center items-center"
+        >
+          <template x-for="platform in platforms" :key="platform.id">
+            <div
+              class="w-[162px] h-[142px] flex items-center justify-center transition-all group hover:bg-gradient-to-r from-[#0F3A95] to-[#745470] shadow-sm hover:shadow-blue-700 p-0.5 rounded-lg"
+            >
+              <div
+                class="group-hover:bg-[#161C22] w-full h-full rounded-md py-5 px-4 flex gap-3.5 flex-col items-center justify-center"
+              >
+                <div x-data="platform.icon" x-html="icon"></div>
+                <span
+                  class="font-inter font-medium text-[24px] leading-[130%] tracking-[0.5px]"
+                  x-text="platform.name"
+                ></span>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <!-- End: Download Section -->
+
+    <!-- Start: Plans Section -->
+    <section id="plans" class="relative bg-gradient-to-b from-[#011817] to-[#210222]">
+      <div
+        class="max-w-[1280px] mx-auto py-[50px] pb-[70px] sm:py-[60px] px-3 sm:px-4"
+      >
+        <div class="max-w-[700px] 2xl:max-w-[900px]">
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] text-sm text-gray-500"
+          >
+            PLANS
+          </p>
+
+          <h1
+            class="mt-4 text-accent-2 font-primary font-bold leading-[120%] tracking-[0.5px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px]"
+          >
+            Pricing That Respects You
+          </h1>
+
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] pt-[28px]"
+          >
+            No contracts. No fake discounts. Just one flat rate — pay monthly or
+            yearly. Cancel anytime.
+          </p>
+        </div>
+
+        <div
+          x-data="{
+            plans: [
+              { id: '001', type: 'Monthly', button_text: 'Start Monthly', payment:'$6 / mo', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
+              { id: '002', type: 'Yearly', button_text: 'Start Yearly', payment:'$48 / yr', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
+              { id: '003', type: 'Crypto', button_text: 'View Options', payment:'Pay with Crypto', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
+            ]
+          }"
+          class="max-w-[1024px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 mt-8 py-4"
+        >
+          <template x-for="plan in plans" :key="plan.id">
+            <div
+              class="flex items-center justify-center bg-gradient-to-r from-[#630F51] to-[#745470] shadow-sm hover:shadow-purple-700 p-0.5 rounded-lg"
+            >
+              <div
+                class="w-full min-h-[360px] flex flex-col rounded-md py-5 px-4"
+                :class="plan.type === 'Crypto' ? 'bg-[#211C07]' : 'bg-[#210720]'"
+              >
+                <div class="flex flex-col gap-y-3.5">
+                  <p
+                    class="font-primary font-bold text-[18px] sm:text-[20px] leading-[130%] tracking-[0.5px]"
+                    x-text="plan.type === 'Crypto' ? 'Anonymous Access' : plan.type"
+                  ></p>
+
+                  <p
+                    class="text-accent-3 font-inter font-extrabold text-[24px] sm:text-[32px] leading-[130%] tracking-[0.5px]"
+                    x-text="plan.payment"
+                  ></p>
+
+                  <p
+                    class="font-inter font-semibold leading-[130%] tracking-[0.5px]"
+                    x-text="plan.subtext"
+                  ></p>
+                </div>
+
+                <ul class="list-disc text-gray-300 pl-5 mt-3.5 flex-1">
+                  <template x-for="offer in plan.offers">
+                    <li
+                      x-text="offer"
+                      class="font-inter font-semibold text-sm leading-[120%] tracking-[0.5px] mt-3"
+                    ></li>
+                  </template>
+                </ul>
+
+                <div class="">
+                  <button
+                    class="w-full rounded-lg font-inter font-semibold text-sm px-5 py-2.5 bg-accent-2 border-2 border-[#07167E] hover:bg-accent-2/90 transition-all cursor-pointer"
+                    x-text="plan.button_text"
+                  >
+                    Start Monthly
+                  </button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <!-- End: Plans Section -->
+
+    <!-- Start: FAQ Section -->
+    <section id="faq" class="relative bg-[#111218] min-h-[830px]">
+      <div
+        class="max-w-[1280px] mx-auto py-[50px] pb-[70px] sm:py-[60px] px-3 sm:px-4"
+      >
+        <div class="max-w-[700px] 2xl:max-w-[900px]">
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] text-sm text-gray-400"
+          >
+            FREQUENTLY ASKED QUESTIONS
+          </p>
+
+          <h1
+            class="mt-4 text-accent-2 font-primary font-bold leading-[120%] tracking-[0.5px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px]"
+          >
+            Got Questions? We’ve Got Answers.
+          </h1>
+
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] pt-[28px]"
+          >
+            Everything you need to know about VantaVPN’s privacy, setup, and
+            features.
+          </p>
+        </div>
+
+        <div
+          x-data="{
+            faq: [
+              { id: '001', question: 'How does VantaVPN protect my privacy?', answer: 'VantaVPN uses multi-hop encryption, no-logs policy, and real-time metadata masking to keep your online activities completely private.' },
+              { id: '002', question: 'Can VantaVPN slow down my internet speed?', answer: 'Our network is optimized for speed with high-performance servers worldwide, so you get strong protection without compromising browsing or streaming speeds.' },
+              { id: '003', question: 'Do I need to create an account to use VantaVPN?', answer: 'No account is required. You can opt for anonymous access and pay with cryptocurrency for maximum privacy.' },
+              { id: '004', question: 'Which devices and platforms does VantaVPN support?', answer: 'VantaVPN supports Windows, macOS, Linux, Android, and iOS, with easy-to-use apps and manual setup guides for all.' },
+              { id: '005', question: 'Does VantaVPN keep logs of my activity?', answer: 'Absolutely not. We operate a strict zero-logs policy — no data on your browsing history or connection is ever stored.' },
+              { id: '006', question: 'What if I need help setting up or troubleshooting?', answer: 'Our 24/7 support team is ready to assist you, and we provide detailed install guides for all platforms.' },
+            ]
+          }"
+          class="max-w-[1024px] mt-8 py-4"
+        >
+          <template x-for="item in faq" :key="item.id">
+            <div class="flex items-center justify-center">
+              <div class="w-full">
+                <div
+                  class="group p-6 flex flex-col gap-y-3.5 border-b-2 border-[#23262A]"
+                >
+                  <p
+                    class="font-primary font-semibold sm:font-bold sm:text-lg md:text-xl leading-[130%] tracking-[0.5px] select-none"
+                    x-text="item.question"
+                  ></p>
+
+                  <div class="hidden group-hover:block">
+                    <p
+                      class="font-primary font-medium sm:font-semibold leading-[130%] tracking-[0.5px]"
+                      x-text="item.answer"
+                    ></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <!-- End: FAQ Section -->
+
+    <!-- Start: CTA Strip Section -->
+    <section
+      class="select-none bg-gradient-to-b from-[#0031A0] to-[#00152F] py-[60px] sm:py-[80px]"
+    >
+      <div class="max-w-[1280px] mx-auto px-3 sm:px-4">
+        <h4
+          class="font-primary font-bold text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] leading-[130%] tracking-[0.5px]"
+        >
+          Ready to Vanish?
+        </h4>
+        <p
+          class="font-primary font-medium leading-[130%] tracking-[0.5px] mt-3.5"
+        >
+          One tap. Total privacy. No strings attached.
+        </p>
+
+        <button
+          class="mt-5 cursor-pointer py-2 px-4 sm:px-6 sm:py-2.5 bg-white hover:bg-yellow-600 hover:text-white transition-all hover:border-[#cdaf05] border-[#FCE042] border-2 rounded-lg text-black text-sm font-inter font-semibold leading-[130%] tracking-[0.5px]"
+        >
+          Get VantaVPN
+        </button>
+      </div>
+    </section>
+    <!-- End: CTA Strip Section -->
+
+    <!-- Start: Footer -->
+    <footer class="bg-[#151719] mt-[40px]">
+      <div
+        class="max-w-[1280px] mx-auto py-[50px] px-4 md:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-10"
+      >
+        <div>
+          <div
+            x-data="iconComponent('logo', 'w-[120px] md:w-[140px]')"
+            x-html="icon"
+          ></div>
+        </div>
+
+        <div class="flex items-center justify-end gap-x-6">
+          <!-- links -->
+          <ul
+            class="flex items-end justify-center gap-[48px] select-none"
+          >
+            <li>
+              <a href="#download" class="hover:text-accent-3 text-[#D1D1D1] transition"
+                >Download</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-accent-3 text-[#D1D1D1] transition"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-accent-3 text-[#D1D1D1] transition"
+                >Help</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="py-5 text-center text-sm text-gray-200 bg-[#1E2124] select-none"
+      >
+        © 2025 VantaVPN. Zero logs. Zero leaks. Total privacy.
+      </div>
+    </footer>
+    <!-- End: Footer -->
+
+  </body>
+</html>
