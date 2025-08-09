@@ -32,25 +32,25 @@
             class="hidden lg:flex items-center justify-center gap-x-16 select-none"
           >
             <li>
-              <a href="#intro" class="hover:text-accent-3 transition"
+              <a href="#download" class="hover:text-accent-3 transition"
                 >Download</a
               >
             </li>
             <li>
-              <a href="#intro" class="hover:text-accent-3 transition"
+              <a href="#features" class="hover:text-accent-3 transition"
                 >Features</a
               >
             </li>
             <li>
-              <a href="#intro" class="hover:text-accent-3 transition"
+              <a href="#plans" class="hover:text-accent-3 transition"
                 >Pricing</a
               >
             </li>
             <li>
-              <a href="#intro" class="hover:text-accent-3 transition">Login</a>
+              <a href="#" class="hover:text-accent-3 transition">Login</a>
             </li>
             <li>
-              <a href="#intro" class="hover:text-accent-3 transition">Help</a>
+              <a href="#" class="hover:text-accent-3 transition">Help</a>
             </li>
           </ul>
 
@@ -81,27 +81,27 @@
                 class="menu flex flex-col items-end justify-center gap-[18px] select-none"
               >
                 <li>
-                  <a href="#intro" class="hover:text-accent-3 transition"
+                  <a href="#download" class="hover:text-accent-3 transition"
                     >Download</a
                   >
                 </li>
                 <li>
-                  <a href="#intro" class="hover:text-accent-3 transition"
+                  <a href="#features" class="hover:text-accent-3 transition"
                     >Features</a
                   >
                 </li>
                 <li>
-                  <a href="#intro" class="hover:text-accent-3 transition"
+                  <a href="#plans" class="hover:text-accent-3 transition"
                     >Pricing</a
                   >
                 </li>
                 <li>
-                  <a href="#intro" class="hover:text-accent-3 transition"
+                  <a href="#" class="hover:text-accent-3 transition"
                     >Login</a
                   >
                 </li>
                 <li>
-                  <a href="#intro" class="hover:text-accent-3 transition"
+                  <a href="#" class="hover:text-accent-3 transition"
                     >Help</a
                   >
                 </li>
@@ -201,7 +201,7 @@
     <!-- End: Hero Section -->
 
     <!-- Start: Features Section -->
-    <section class="relative">
+    <section id="features" class="relative">
       <div
         class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[70px] pb-[28px] px-3 sm:px-4"
       >
@@ -264,7 +264,7 @@
     <!-- End: Feature Section -->
 
     <!-- Start: Steps Section -->
-    <section class="relative pt-[20px] sm:pt-[40px] pb-[20px]">
+    <section id="steps" class="relative pt-[20px] sm:pt-[40px] pb-[20px]">
       <div
         class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[70px] pb-[28px] px-3 sm:px-4"
       >
@@ -335,7 +335,7 @@
     <!-- End: Steps Section -->
 
     <!-- Start: Download Section -->
-    <section class="relative">
+    <section id="download" class="relative">
       <div
         class="max-w-[1280px] mx-auto pt-[56px] sm:pt-[60px] pb-[100px] px-3 sm:px-4"
       >
@@ -394,7 +394,7 @@
     <!-- End: Download Section -->
 
     <!-- Start: Plans Section -->
-    <section class="relative bg-gradient-to-b from-[#011817] to-[#210222]">
+    <section id="plans" class="relative bg-gradient-to-b from-[#011817] to-[#210222]">
       <div
         class="max-w-[1280px] mx-auto py-[50px] pb-[70px] sm:py-[60px] px-3 sm:px-4"
       >
@@ -427,7 +427,7 @@
               { id: '003', type: 'Crypto', button_text: 'View Options', payment:'Pay with Crypto', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
             ]
           }"
-          class="max-w-[1024px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 mt-8 py-4 justify-center items-center"
+          class="max-w-[1024px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 mt-8 py-4"
         >
           <template x-for="plan in plans" :key="plan.id">
             <div
@@ -479,8 +479,98 @@
     </section>
     <!-- End: Plans Section -->
 
+    <!-- Start: FAQ Section -->
+    <section id="faq" class="relative bg-[#111218] min-h-[830px]">
+      <div
+        class="max-w-[1280px] mx-auto py-[50px] pb-[70px] sm:py-[60px] px-3 sm:px-4"
+      >
+        <div class="max-w-[700px] 2xl:max-w-[900px]">
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] text-sm text-gray-400"
+          >
+            FREQUENTLY ASKED QUESTIONS
+          </p>
+
+          <h1
+            class="mt-4 text-accent-2 font-primary font-bold leading-[120%] tracking-[0.5px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px]"
+          >
+            Got Questions? We’ve Got Answers.
+          </h1>
+
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] pt-[28px]"
+          >
+            Everything you need to know about VantaVPN’s privacy, setup, and
+            features.
+          </p>
+        </div>
+
+        <div
+          x-data="{
+            faq: [
+              { id: '001', question: 'How does VantaVPN protect my privacy?', answer: 'VantaVPN uses multi-hop encryption, no-logs policy, and real-time metadata masking to keep your online activities completely private.' },
+              { id: '002', question: 'Can VantaVPN slow down my internet speed?', answer: 'Our network is optimized for speed with high-performance servers worldwide, so you get strong protection without compromising browsing or streaming speeds.' },
+              { id: '003', question: 'Do I need to create an account to use VantaVPN?', answer: 'No account is required. You can opt for anonymous access and pay with cryptocurrency for maximum privacy.' },
+              { id: '004', question: 'Which devices and platforms does VantaVPN support?', answer: 'VantaVPN supports Windows, macOS, Linux, Android, and iOS, with easy-to-use apps and manual setup guides for all.' },
+              { id: '005', question: 'Does VantaVPN keep logs of my activity?', answer: 'Absolutely not. We operate a strict zero-logs policy — no data on your browsing history or connection is ever stored.' },
+              { id: '006', question: 'What if I need help setting up or troubleshooting?', answer: 'Our 24/7 support team is ready to assist you, and we provide detailed install guides for all platforms.' },
+            ]
+          }"
+          class="max-w-[1024px] mt-8 py-4"
+        >
+          <template x-for="item in faq" :key="item.id">
+            <div class="flex items-center justify-center">
+              <div class="w-full">
+                <div
+                  class="group p-6 flex flex-col gap-y-3.5 border-b-2 border-[#23262A]"
+                >
+                  <p
+                    class="font-primary font-semibold sm:font-bold sm:text-lg md:text-xl leading-[130%] tracking-[0.5px] select-none"
+                    x-text="item.question"
+                  ></p>
+
+                  <div class="hidden group-hover:block">
+                    <p
+                      class="font-primary font-medium sm:font-semibold leading-[130%] tracking-[0.5px]"
+                      x-text="item.answer"
+                    ></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <!-- End: FAQ Section -->
+
+    <!-- Start: CTA Strip Section -->
+    <section
+      class="select-none bg-gradient-to-b from-[#0031A0] to-[#00152F] py-[60px] sm:py-[80px]"
+    >
+      <div class="max-w-[1280px] mx-auto px-3 sm:px-4">
+        <h4
+          class="font-primary font-bold text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] leading-[130%] tracking-[0.5px]"
+        >
+          Ready to Vanish?
+        </h4>
+        <p
+          class="font-primary font-medium leading-[130%] tracking-[0.5px] mt-3.5"
+        >
+          One tap. Total privacy. No strings attached.
+        </p>
+
+        <button
+          class="mt-5 cursor-pointer py-2 px-4 sm:px-6 sm:py-2.5 bg-white hover:bg-yellow-600 hover:text-white transition-all hover:border-[#cdaf05] border-[#FCE042] border-2 rounded-lg text-black text-sm font-inter font-semibold leading-[130%] tracking-[0.5px]"
+        >
+          Get VantaVPN
+        </button>
+      </div>
+    </section>
+    <!-- End: CTA Strip Section -->
+
     <!-- Start: Footer -->
-    <footer class="bg-primary mt-[80px]">
+    <footer class="bg-[#151719] mt-[40px]">
       <div
         class="max-w-[1280px] mx-auto py-[50px] px-4 md:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-10"
       >
@@ -493,11 +583,30 @@
 
         <div class="flex items-center justify-end gap-x-6">
           <!-- links -->
+          <ul
+            class="flex items-end justify-center gap-[48px] select-none"
+          >
+            <li>
+              <a href="#download" class="hover:text-accent-3 text-[#D1D1D1] transition"
+                >Download</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-accent-3 text-[#D1D1D1] transition"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-accent-3 text-[#D1D1D1] transition"
+                >Help</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
 
       <div
-        class="py-5 text-center text-sm text-gray-200 bg-zinc-700 select-none"
+        class="py-5 text-center text-sm text-gray-200 bg-[#1E2124] select-none"
       >
         © 2025 VantaVPN. Zero logs. Zero leaks. Total privacy.
       </div>
