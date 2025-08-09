@@ -393,6 +393,92 @@
     </section>
     <!-- End: Download Section -->
 
+    <!-- Start: Plans Section -->
+    <section class="relative bg-gradient-to-b from-[#011817] to-[#210222]">
+      <div
+        class="max-w-[1280px] mx-auto py-[50px] pb-[70px] sm:py-[60px] px-3 sm:px-4"
+      >
+        <div class="max-w-[700px] 2xl:max-w-[900px]">
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] text-sm text-gray-500"
+          >
+            PLANS
+          </p>
+
+          <h1
+            class="mt-4 text-accent-2 font-primary font-bold leading-[120%] tracking-[0.5px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px]"
+          >
+            Pricing That Respects You
+          </h1>
+
+          <p
+            class="font-primary font-medium leading-[120%] tracking-[0.5px] pt-[28px]"
+          >
+            No contracts. No fake discounts. Just one flat rate — pay monthly or
+            yearly. Cancel anytime.
+          </p>
+        </div>
+
+        <div
+          x-data="{
+            plans: [
+              { id: '001', type: 'Monthly', button_text: 'Start Monthly', payment:'$6 / mo', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
+              { id: '002', type: 'Yearly', button_text: 'Start Yearly', payment:'$48 / yr', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
+              { id: '003', type: 'Crypto', button_text: 'View Options', payment:'Pay with Crypto', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
+            ]
+          }"
+          class="max-w-[1024px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 mt-8 py-4 justify-center items-center"
+        >
+          <template x-for="plan in plans" :key="plan.id">
+            <div
+              class="flex items-center justify-center bg-gradient-to-r from-[#630F51] to-[#745470] shadow-sm hover:shadow-purple-700 p-0.5 rounded-lg"
+            >
+              <div
+                class="w-full min-h-[360px] flex flex-col rounded-md py-5 px-4"
+                :class="plan.type === 'Crypto' ? 'bg-[#211C07]' : 'bg-[#210720]'"
+              >
+                <div class="flex flex-col gap-y-3.5">
+                  <p
+                    class="font-primary font-bold text-[18px] sm:text-[20px] leading-[130%] tracking-[0.5px]"
+                    x-text="plan.type === 'Crypto' ? 'Anonymous Access' : plan.type"
+                  ></p>
+
+                  <p
+                    class="text-accent-3 font-inter font-extrabold text-[24px] sm:text-[32px] leading-[130%] tracking-[0.5px]"
+                    x-text="plan.payment"
+                  ></p>
+
+                  <p
+                    class="font-inter font-semibold leading-[130%] tracking-[0.5px]"
+                    x-text="plan.subtext"
+                  ></p>
+                </div>
+
+                <ul class="list-disc text-gray-300 pl-5 mt-3.5 flex-1">
+                  <template x-for="offer in plan.offers">
+                    <li
+                      x-text="offer"
+                      class="font-inter font-semibold text-sm leading-[120%] tracking-[0.5px] mt-3"
+                    ></li>
+                  </template>
+                </ul>
+
+                <div class="">
+                  <button
+                    class="w-full rounded-lg font-inter font-semibold text-sm px-5 py-2.5 bg-accent-2 border-2 border-[#07167E] hover:bg-accent-2/90 transition-all cursor-pointer"
+                    x-text="plan.button_text"
+                  >
+                    Start Monthly
+                  </button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <!-- End: Plans Section -->
+
     <!-- Start: Footer -->
     <footer class="bg-primary mt-[80px]">
       <div
