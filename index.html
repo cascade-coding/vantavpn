@@ -23,10 +23,12 @@
         <div
           class="relative flex items-center justify-between px-3 sm:px-4 lg:px-6"
         >
-          <div
-            x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
-            x-html="icon"
-          ></div>
+          <a href="/vantavpn/">
+            <div
+              x-data="iconComponent('logo', 'w-[120px] md:w-[190px] 2xl:w-[220px]')"
+              x-html="icon"
+            ></div>
+          </a>
 
           <!-- large menu -->
           <ul
@@ -325,7 +327,7 @@
         <div class="mt-12">
           <a
             href="#"
-            class="py-2.5 sm:py-[12px] px-[18px] sm:px-[24px] border-2 border-[#3E042C] transition hover:border-[#650a48]  active:border-[#650a48] rounded-lg"
+            class="py-2.5 sm:py-[12px] px-[18px] sm:px-[24px] border-2 border-[#3E042C] transition hover:border-[#650a48] active:border-[#650a48] rounded-lg"
             >See Everything We Offer</a
           >
         </div>
@@ -425,8 +427,8 @@
           x-data="{
             plans: [
               { id: '001', type: 'Monthly', button_text: 'Start Monthly', payment:'$6 / mo', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
-              { id: '002', type: 'Yearly', button_text: 'Start Yearly', payment:'$48 / yr', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
-              { id: '003', type: 'Crypto', button_text: 'View Options', payment:'Pay with Crypto', subtext: 'Flexible, cancel anytime', offers: ['Unlimited bandwidth', 'All features included', 'Supports all platforms']},
+              { id: '002', type: 'Yearly', button_text: 'Start Yearly', payment:'$48 / yr', subtext: 'Save 33% • One-time payment', offers: ['Unlimited bandwidth', 'All features included', 'Priority support']},
+              { id: '003', type: 'Crypto', button_text: 'View Options', payment:'Pay with Crypto', subtext: 'Minimal signup • Burnable keys', offers: ['No email required', 'Short-term keys (7–30 days)', 'BTC, Monero, Gift Cards']},
             ]
           }"
           class="max-w-[1024px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 mt-8 py-4"
